@@ -1,0 +1,43 @@
+<div class="list-card">
+    <h5 class="card-header">Card Details</h5>
+    <div class="card-body">
+
+<div class="pokecardlist" *ngFor="let pokemon of pokemons">
+    <div class="pokecard">
+        <div class="pokecard-img">
+            <img src="{{pokemon.imageUrlHiRes}}" alt="">
+        </div>
+        <div class="pokecard-info">
+            <span class="pokecard-id"><strong>ID:</strong> {{pokemon.id}}</span><br>
+            <span class="pokecard-name"><strong>NAME:</strong> {{pokemon.name}}</span><br>
+            <span class="pokecard-types"><strong>TYPES:</strong> {{pokemon.types}}</span>
+        
+        <div class="pokecard-attack" *ngFor="let attack of pokemon.attacks"><strong>ATTACKS</strong>
+            <ul class="attack-li">
+                <li>Name: {{attack.name}}</li>
+                <ul>
+                    <li>Cost: {{attack.cost}}</li>
+                    <li>EnergyCost: {{attack.convertedEnergyCost}}</li>
+                    <li>Damage: {{attack.damage}}</li>
+                    <li>Description: {{attack.text}}</li>
+                </ul>
+            </ul>
+        </div>
+        <div class="pokecard-resistances" *ngFor="let resistances of pokemon.resistances"><strong>Resistances</strong>
+            <ul class="resistances-li">
+                <ul>
+                    <li>{{resistances.type}}: {{resistances.value}}</li>
+                </ul>
+            </ul>
+        </div>
+        <div class="pokecard-weaknesses" *ngFor="let weaknesses of pokemon.weaknesses"><strong>Weaknesses</strong>
+            <ul class="weaknesses-li">
+                <ul>
+                    <li>{{weaknesses.type}}: {{weaknesses.value}}</li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    </div>
+</div>
+</div>

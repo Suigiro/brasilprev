@@ -1,0 +1,19 @@
+<div class="list-card">
+    <h5 class="card-header">Lista de Cards</h5>
+    <div class="card-body">
+        <div class="searchForm">
+            <input type="search" [(ngModel)]="searchCard" placeholder="Search Card Name">
+        </div>
+        <div class="pokemon-list">
+            <div class="pokemon-group" *ngFor="let pokemon of pokemons | filter:searchCard | sortBy: 'asc':'name'">
+                <div class="pokemon-card"><img src={{pokemon.imageUrl}} alt="pokemon"></div>
+                <div class="pokemon-desc">
+                    <span class="pokemon-id"><strong>Id:</strong> {{pokemon.id}}</span>
+                    <span class="pokemon-name"><strong>Name:</strong>{{pokemon.name}}</span>
+                    <span class="pokemon-types"><strong>Types:</strong>{{pokemon.types}}</span>
+                    <button class="pokemon-detatails" (click)="pokecard(pokemon)"><i class="material-icons">View Card</i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

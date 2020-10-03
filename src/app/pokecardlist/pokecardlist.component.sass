@@ -1,0 +1,58 @@
+$color-theme: #4caf50
+$color-warning: #FFA500
+$color-error: #FF0000
+$color-success: #3b60e9
+
+$color-btn: #3b60e9
+$color-btn-hover: #758fef
+
+.list-card
+    flex:1
+    background-color: $color-theme
+    width:100%
+
+.pokemon-list
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(15.375rem, 1fr))
+    width:100%
+
+.pokemon-search
+    margin-bottom: 10px
+
+.pokemon-group
+   flex-direction: row
+   justify-content: space-between
+   border: 1px solid #fff
+   width: 15.375rem
+   margin-top: 0.5rem
+   margin-left: 0.5rem
+    
+.pokemon-card
+    font-size: 12px
+    flex-direction: row
+    width: 15.375rem
+    height: 21.375rem   
+
+.pokemon-desc
+    width: 15.375rem
+    display: grid
+    grid-template-columns: repeat(1, 1fr) 
+    align-items: center   
+
+.pokemon-id
+   font-family: Archivo
+   margin-left: 35%
+
+.pokemon-name
+    font-family: Archivo
+    margin-left: 35%
+
+.pokemon-types
+    font-family: Archivo
+    margin-left: 35%
+
+.pokemon-detatails
+    font-family: Lato
+    background: $color-btn
+    &:hover
+        background: $color-btn-hover
